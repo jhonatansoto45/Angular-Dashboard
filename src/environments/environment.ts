@@ -1,6 +1,6 @@
 export const environment = {
   firebase: {
-    apiKey: 'AIzaSyAMrGnDH34I0li01xpRFc2iW_5ByCNZGfM',
+    apiKey: process.env['NG_APP_FIRE_API_KEY'],
     authDomain: 'dashboard-f225b.firebaseapp.com',
     projectId: 'dashboard-f225b',
     storageBucket: 'dashboard-f225b.appspot.com',
