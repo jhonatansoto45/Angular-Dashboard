@@ -1,0 +1,43 @@
+<aside class="menu">
+  <div class="menu__user">
+    <picture class="menu__picture">
+      <img src="../../../assets/images/user.jpg" alt="User" class="menu__img" />
+    </picture>
+    <div class="menu__user__name">
+      <p>Leanne Graham</p>
+      <sub>Director de Proyectos</sub>
+    </div>
+  </div>
+  <div class="menu__border"></div>
+  <nav class="menu__nav">
+    <button
+      class="menu__item"
+      *ngFor="let link of menuList"
+      [routerLink]="link.route"
+      routerLinkActive="menu__active"
+    >
+      <div class="menu__img__icon">
+        <img [src]="link.icon" [alt]="link.name" class="menu__icon" />
+      </div>
+      <span class="menu__name">{{ link.name }}</span>
+    </button>
+  </nav>
+  <section class="banner">
+    <p class="banner__text">¿Quieres ver las tareas de hoy?</p>
+    <button class="banner__btn">Consultar</button>
+  </section>
+  <section class="account">
+    <p class="account__title">Cuenta</p>
+    <button
+      class="menu__item"
+      *ngFor="let link of menuUser"
+      [routerLink]="link.route"
+      routerLinkActive="menu__active"
+    >
+      <div class="menu__img__icon">
+        <img [src]="link.icon" [alt]="link.name" class="menu__icon" />
+      </div>
+      <span class="menu__name">{{ link.name }}</span>
+    </button>
+  </section>
+</aside>

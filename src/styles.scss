@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+  src: url(assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --color-text: #ffffff;
+  --font-bold: 600;
+  --font-size-sm: 0.875rem;
+  --bg: #1a202c;
+  --border-menu: #e2e8f0;
+  --background-menu-item: #1A1F37;
+  --color-icon: #582CFF;
+}
+
+body {
+  background-image: url(./assets/images/background-body.png);
+  background-size: cover;
+  background-position: center center;
+}
