@@ -1,8 +1,11 @@
-.container {
+// dashboard
+.private__container {
   display: grid;
   grid-template-columns: 276px 1fr;
 }
 
-.content {
-  color: white;
+.content,
+// landing page
+.public__landing {
+  color: var(--color-text);
 }
