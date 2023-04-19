@@ -1,0 +1,22 @@
+.scroll {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  height: fit-content;
+  /**keep scrolling when
+      *finger or cursor scrolling*/
+  -webkit-overflow-scrolling: touch;
+  cursor: auto;
+  position: absolute;
+  left: -45px;
+  margin-top: 45px;
+}
+.card {
+  display: inline-block;
+  margin-right: 15px;
+  width: 150px;
+  height: 180px;
+  background-color: white;
+  border-radius: var(--border-radius);
+}
