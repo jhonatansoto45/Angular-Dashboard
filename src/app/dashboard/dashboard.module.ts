@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DragScrollModule } from 'ngx-drag-scroll';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HomeComponent } from './pages/home/home.component';
@@ -17,7 +18,8 @@ import { ScrollItemsComponent } from './components/scroll-items/scroll-items.com
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    DragScrollModule
   ]
 })
 export class DashboardModule { }
