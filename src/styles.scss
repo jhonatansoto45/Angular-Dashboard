@@ -18,8 +18,20 @@
   --font-size-sm: 0.875rem;
   --bg: #1a202c;
   --border-menu: #e2e8f0;
-  --background-menu-item: #1A1F37;
-  --color-icon: #582CFF;
+  --background-menu-item: #1a1f37;
+  --color-icon: #582cff;
+
+  --bg-dark-gradient: linear-gradient(
+    111.84deg,
+    rgba(6, 11, 38, 0.94) 59.3%,
+    rgba(26, 31, 55, 0) 100%
+  );
+
+  // for the svg icons
+  --invert-purple-color: invert(18%) sepia(95%) saturate(4717%)
+    hue-rotate(252deg) brightness(98%) contrast(106%); // #582cff
+  --invert-white-color: invert(95%) sepia(5%) saturate(0%) hue-rotate(23deg)
+    brightness(106%) contrast(107%); // #ffffff
 }
 
 body {
