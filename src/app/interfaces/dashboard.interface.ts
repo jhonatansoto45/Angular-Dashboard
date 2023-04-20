@@ -4,3 +4,8 @@ export interface MenuItem {
   icon: string;
 }
 
+export interface DragScrollItem {
+  image: string;
+  text: string;
+  value: string;
+}

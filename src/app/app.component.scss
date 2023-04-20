@@ -4,8 +4,13 @@
   grid-template-columns: 276px 1fr;
 }
 
+.content {
+  margin-top: 40px;
+ }
+
 .content,
 // landing page
 .public__landing {
   color: var(--color-text);
+ }
 }

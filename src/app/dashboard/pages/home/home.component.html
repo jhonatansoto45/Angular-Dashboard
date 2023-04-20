@@ -1,1 +1,26 @@
-<p>home works!</p>
+<section class="welcome">
+  <article class="welcome__legend">
+    <h1 class="welcome__title" [ngStyle]="{ 'height.px': '24' }">
+      {{ dateHour }}
+    </h1>
+    <br />
+    <h1 class="welcome__user">Leanne Graham</h1>
+    <p class="welcome__text">
+      Aquí puedes hacer un seguimiento de tu actividad y encontrar un curso
+      adecuado para aprender nuevas habilidades.
+    </p>
+    <button class="welcome__btn">
+      <img
+        src="../../../../assets/images/icons/circle-check.svg"
+        alt="Icon Check"
+        class="welcome__img"
+      />
+      <span class="welcome__text__btn"> Ver Sugerencias </span>
+    </button>
+  </article>
+  <div class="welcome__contain">
+    <app-scroll-items></app-scroll-items>
+  </div>
+</section>
+
+<section class="status"></section>
