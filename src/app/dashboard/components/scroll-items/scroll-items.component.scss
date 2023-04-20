@@ -1,0 +1,40 @@
+drag-scroll {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: -45px;
+  margin-top: 45px;
+}
+
+.card {
+  display: inline-block;
+  margin-right: 15px;
+  width: 150px;
+  height: 200px;
+  padding: 8px;
+  overflow: hidden;
+  background-image: url(../../../../assets/images/bg-geo-ban.png);
+  border-radius: var(--border-radius);
+  cursor: grab;
+
+  .card__img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 25px;
+    object-fit: contain;
+  }
+
+  .card__text {
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    text-align: center;
+    font-weight: var(--font-bold);
+  }
+
+  .card__value {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}

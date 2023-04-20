@@ -1,0 +1,7 @@
+<drag-scroll [scrollbar-hidden]="true">
+  <div class="card" *ngFor="let item of dragItem">
+    <img class="card__img" [src]="item.image" alt="Illustrations" srcset="" />
+    <p class="card__text">{{ item.text }}</p>
+    <sub class="card__value"> {{ item.value }} </sub>
+  </div>
+</drag-scroll>
