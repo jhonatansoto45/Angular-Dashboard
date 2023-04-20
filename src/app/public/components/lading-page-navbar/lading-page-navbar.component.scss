@@ -21,8 +21,16 @@
   .nav__links {
     gap: 20px;
 
+    .nav__link {
+      &:hover {
+        color: var(--color-text-white-hover);
+      }
+    }
+
     //icon
-    .link__picture .link__img {
+    .nav__link .link__picture .link__img {
+      -webkit-filter: invert(1);
+      filter: invert(1);
     }
   }
 }
@@ -53,6 +61,11 @@ a::before {
 }
 
 a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.active__link::before {
   transform-origin: left;
   transform: scaleX(1);
 }

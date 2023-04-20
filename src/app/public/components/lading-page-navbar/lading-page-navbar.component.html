@@ -1,12 +1,22 @@
 <header class="header" ngxHideOnScroll [classNameWhenHidden]="'nav--hidden'">
   <nav class="nav">
     <picture class="nav__picture">
-      <img src="" alt="Logo" class="nav__logo" />
+      <img
+        src="../../../../assets/images/icons/logo.png"
+        alt="Logo"
+        class="nav__logo"
+        width="65"
+        height="55"
+      />
     </picture>
     <div class="nav__links">
-      <a href="#"> Servicios </a>
-      <a href="#"> Contactanos </a>
-      <a routerLink="/init/signin" class="nav__link">
+      <a href="#" class="nav__link"> Servicios </a>
+      <a href="#" class="nav__link"> Contactanos </a>
+      <a
+        routerLink="/init/signin"
+        routerLinkActive="active__link"
+        class="nav__link nav__link--login"
+      >
         <picture class="link__picture">
           <img
             src="../../../../assets/images/icons/user.svg"
