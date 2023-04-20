@@ -1,3 +1,21 @@
-<header>
-  <nav>landing page nav bar here</nav>
+<header class="header" ngxHideOnScroll [classNameWhenHidden]="'nav--hidden'">
+  <nav class="nav">
+    <picture class="nav__picture">
+      <img src="" alt="Logo" class="nav__logo" />
+    </picture>
+    <div class="nav__links">
+      <a href="#"> Servicios </a>
+      <a href="#"> Contactanos </a>
+      <a routerLink="/init/signin" class="nav__link">
+        <picture class="link__picture">
+          <img
+            src="../../../../assets/images/icons/user.svg"
+            alt="profile"
+            class="link__img"
+          />
+        </picture>
+        Login
+      </a>
+    </div>
+  </nav>
 </header>
