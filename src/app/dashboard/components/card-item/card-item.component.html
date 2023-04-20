@@ -1,0 +1,7 @@
+<section class="status">
+  <div class="status__card" *ngFor="let item of dataItem">
+    <img [src]="item.image | image" [alt]="item.text" class="status__img" />
+    <p class="status__value">{{ item.value }}</p>
+    <p class="status__text">{{ item.text }}</p>
+  </div>
+</section>
