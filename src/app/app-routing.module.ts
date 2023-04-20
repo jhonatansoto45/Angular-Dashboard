@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'init',
+    loadChildren: () =>
+      import('./public/home.module').then((m) => m.HomeModule),
+  },
+  {
     path: 'dashboard',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
@@ -13,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'dashboard', //* CAMBIAR AUTH CUANDO YA ESTE
+    redirectTo: 'init', //* CAMBIAR AUTH CUANDO YA ESTE
     pathMatch: 'full',
   },
 ];
