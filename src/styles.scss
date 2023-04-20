@@ -14,20 +14,21 @@
 
 :root {
   --color-text: #ffffff;
+  --color-text-white-hover: #dddddd;
   --font-bold: 600;
   --font-size-sm: 0.875rem;
   --bg: #1a202c;
   --border-menu: #e2e8f0;
   --background-menu-item: #1a1f37;
   --color-icon: #582cff;
-  
+
   --title-size: 2.5rem;
   --border-radius: 12px;
   --background-contain: linear-gradient(
       127.09deg,
       rgba(6, 11, 40, 0.94) 19.41%,
       rgba(10, 14, 35, 0.49) 76.65%
-    );
+    )
     border-box;
 
   --bg-dark-gradient: linear-gradient(

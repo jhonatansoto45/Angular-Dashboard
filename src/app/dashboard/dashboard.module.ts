@@ -8,18 +8,13 @@ import { DetailsComponent } from './pages/details/details.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ScrollItemsComponent } from './components/scroll-items/scroll-items.component';
 
-
 @NgModule({
   declarations: [
     HomeComponent,
     DetailsComponent,
     ProjectsComponent,
-    ScrollItemsComponent
+    ScrollItemsComponent,
   ],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule,
-    DragScrollModule
-  ]
+  imports: [CommonModule, DashboardRoutingModule, DragScrollModule],
 })
-export class DashboardModule { }
+export class DashboardModule {}
