@@ -41,9 +41,6 @@ export class SharedService {
     },
   ];
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  constructor() {}
-
   get menuList(): MenuItem[] {
     return [...this._menuList];
   }

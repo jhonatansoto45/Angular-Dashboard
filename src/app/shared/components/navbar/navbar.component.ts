@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
-import { Event, NavigationEnd, Router } from '@angular/router';
-import { AppRoutingModule } from 'src/app/app-routing.module';
+import { Component, OnInit } from '@angular/core';
+import { Event, NavigationEnd, Router, RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [AppRoutingModule],
+  imports: [RouterModule],
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   currPage = '';
 
-  constructor(private router: Router) {
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         const route = this.router.url.split('/');
