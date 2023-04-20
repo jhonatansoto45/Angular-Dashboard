@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Event, NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -6,18 +6,16 @@ import { Event, NavigationEnd, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   currPage = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         const route = this.router.url.split('/')[1];
-        if (route === 'init') {
-          this.currPage = false;
-        } else {
-          this.currPage = true;
-        }
+        this.currPage = route === 'init' ? false : true;
       }
     });
   }
