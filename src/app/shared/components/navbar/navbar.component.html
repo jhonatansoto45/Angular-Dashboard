@@ -1,4 +1,11 @@
 <header class="header">
+  <button  class="header__menu" (click)="activeMenu()">
+    <img
+      src="../../../../assets/images/icons/menu.svg"
+      alt="icon"
+      class="header__img"
+    />
+  </button>
   <nav class="navbar">
     <span class="navbar__currPage"> Pagina / {{ currPage }} </span>
     <a routerLink="auth/login" class="navbar__link">

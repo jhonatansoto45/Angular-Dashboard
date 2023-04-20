@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { MenuItem } from 'src/app/interfaces/dashboard.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SharedService {
+  activeMenu$: Subject<boolean> = new Subject<boolean>();
+
   private _menuList: MenuItem[] = [
     {
       name: 'Inicio',
