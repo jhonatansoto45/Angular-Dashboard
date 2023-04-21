@@ -1,0 +1,63 @@
+<section class="graph">
+  <div [ngSwitch]="graphType">
+    <ng-container
+      *ngSwitchCase="type.line"
+      [ngTemplateOutlet]="line"
+    ></ng-container>
+    <ng-container
+      *ngSwitchCase="type.pie"
+      [ngTemplateOutlet]="pie"
+    ></ng-container>
+    <ng-container
+      *ngSwitchCase="type.bar"
+      [ngTemplateOutlet]="bar"
+    ></ng-container>
+    <ng-container
+      *ngSwitchCase="type.radar"
+      [ngTemplateOutlet]="radar"
+    ></ng-container>
+  </div>
+</section>
+
+<ng-template #line>
+  <canvas
+    baseChart
+    class="chart line"
+    [type]="type.line"
+    [data]="data"
+    [options]="options"
+  ></canvas>
+</ng-template>
+
+<ng-template #pie>
+  <canvas
+    baseChart
+    class="chart pie"
+    [type]="type.pie"
+    [data]="data"
+    [options]="options"
+  >
+  </canvas>
+</ng-template>
+
+<ng-template #bar>
+  <canvas
+    baseChart
+    class="chart bar"
+    [type]="type.bar"
+    [data]="data"
+    [options]="options"
+  >
+  </canvas>
+</ng-template>
+
+<ng-template #radar>
+  <canvas
+    baseChart
+    class="chart radar"
+    [type]="type.radar"
+    [data]="data"
+    [options]="options"
+  >
+  </canvas>
+</ng-template>

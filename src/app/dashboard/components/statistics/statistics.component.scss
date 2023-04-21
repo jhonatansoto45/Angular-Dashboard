@@ -1,0 +1,46 @@
+.statistics__contain {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.statistics {
+  border-radius: var(--border-radius);
+  background: var(--background-contain);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s linear 0s;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.statistics__line {
+  width: 700px;
+  height: 380px;
+}
+
+.statistics__pie {
+  width: 400px;
+  height: 450px;
+}
+
+.statistics__bar {
+  width: 550px;
+  height: 322px;
+}
+
+.statistics__radar {
+  width: 500px;
+  height: 390px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .statistics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="statistics__contain">
+  <div class="statistics__line statistics">
+    <app-graphics [graphType]="type.line" [data]="lineChartData"></app-graphics>
+  </div>
+  <div class="statistics__pie statistics">
+    <app-graphics [graphType]="type.pie" [data]="pieChartData"></app-graphics>
+  </div>
+  <div class="statistics__bar statistics">
+    <app-graphics [graphType]="type.bar" [data]="barChartData"></app-graphics>
+  </div>
+  <div class="statistics__radar statistics">
+    <app-graphics
+      [graphType]="type.radar"
+      [data]="radarChartData"
+    ></app-graphics>
+  </div>
+</div>

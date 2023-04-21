@@ -15,3 +15,10 @@ export interface CardItemProfile {
   text: string;
   value: number;
 }
+
+export enum TypeChart {
+  line = 'line',
+  pie = 'pie',
+  bar = 'bar',
+  radar = 'radar',
+}
