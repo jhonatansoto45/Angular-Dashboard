@@ -34,7 +34,9 @@ export class CardItemComponent implements AfterViewInit {
   interval!: NodeJS.Timer;
 
   ngAfterViewInit(): void {
-    this.setCounter();
+    // this.setCounter();
+    console.log();
+
   }
 
   setCounter(): void {
