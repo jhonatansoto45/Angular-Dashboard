@@ -15,51 +15,17 @@
   <section class="login">
     <form action="" class="login__form">
       <h2>Crear cuenta</h2>
-      <div>
-        <label for="email">
+      <div *ngFor="let item of signupForm">
+        <label [for]="item.name">
           <picture>
-            <img src="../../../../assets/images/icons/email.svg" alt="email" />
+            <img [src]="item.icon" [alt]="item.name" class="form__icon" />
           </picture>
         </label>
         <input
           class="form__input"
-          name="email"
-          type="email"
-          placeholder="Correo electronico"
-          required
-        />
-      </div>
-      <div>
-        <label for="password">
-          <picture>
-            <img
-              src="../../../../assets/images/icons/password.svg"
-              alt="password"
-            />
-          </picture>
-        </label>
-        <input
-          class="form__input"
-          name="password"
-          type="password"
-          placeholder="Contraseña"
-          required
-        />
-      </div>
-      <div>
-        <label for="confirm__password">
-          <picture>
-            <img
-              src="../../../../assets/images/icons/password.svg"
-              alt="password"
-            />
-          </picture>
-        </label>
-        <input
-          class="form__input"
-          name="confirm__password"
-          type="password"
-          placeholder="Contraseña"
+          [name]="item.name"
+          [type]="item.type"
+          [placeholder]="item.placeholder"
           required
         />
       </div>
@@ -73,6 +39,7 @@
               src="../../../../assets/images/icons/google.svg"
               alt="google"
               class="others__logo"
+              class="form__icon"
             />
           </picture>
         </button>
