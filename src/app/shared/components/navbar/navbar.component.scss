@@ -1,16 +1,31 @@
 .header {
+  display: flex;
+  align-items: center;
+  gap: 45px;
   backdrop-filter: blur(10px);
   transition: all 0.2s linear 0s;
   max-width: 100%;
   padding: 20px;
-  margin: 16px 16px 16px 16px;
+  margin: 16px;
   border-radius: 16px;
+}
+
+.header__menu {
+  border: none;
+  filter: var(--invert-white-color);
+  display: none;
+  cursor: pointer;
+}
+
+.header__menu:active {
+  transform: scale(1.1);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1; /* POR EL PADRE */
 
   .navbar__currPage {
     font-size: 0.9rem;
@@ -40,5 +55,11 @@
     &:hover {
       color: var(--color-icon);
     }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .header__menu {
+    display: block;
   }
 }

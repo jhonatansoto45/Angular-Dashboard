@@ -1,4 +1,7 @@
 .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
   background: linear-gradient(
     111.84deg,
     rgba(6, 11, 38, 0.94) 59.3%,
@@ -12,6 +15,19 @@
   padding: 20px;
   margin: 16px 0px 16px 16px;
   border-radius: 16px;
+  transition: 0.5s ease-in-out all;
+  z-index: 9999;
+}
+
+.menu__close {
+  border: none;
+  filter: var(--invert-white-color);
+  display: none;
+  cursor: pointer;
+}
+
+.menu__close:active {
+  transform: scale(1.1);
 }
 
 .menu__border {
@@ -189,5 +205,19 @@
   .banner__btn:hover::before {
     top: -30px;
     left: -30px;
+  }
+}
+
+.visible__menu {
+  transform: translateX(0px) !important;
+}
+
+@media screen and (max-width: 1300px) {
+  .menu {
+    transform: translateX(-300px);
+
+    .menu__close {
+      display: block;
+    }
   }
 }

@@ -4,14 +4,16 @@
   grid-template-columns: 276px 1fr;
 }
 
-.content {
-  margin-top: 40px;
-}
-
 .content,
 // landing page
 .public__landing {
   color: var(--color-text);
+}
+
+@media screen and (max-width: 1300px) {
+  .private__container {
+    grid-template-columns: 1fr;
+  }
 }
 
 // .public__outlet {

@@ -1,4 +1,4 @@
-<aside class="menu">
+<aside class="menu" [ngClass]="{ visible__menu: visibleMenu }">
   <div class="menu__user">
     <picture class="menu__picture">
       <img src="../../../assets/images/user.jpg" alt="User" class="menu__img" />
@@ -7,6 +7,13 @@
       <p>Leanne Graham</p>
       <sub>Director de Proyectos</sub>
     </div>
+    <button class="menu__close" (click)="disabledMenu()">
+      <img
+        src="../../../../assets/images/icons/close.svg"
+        alt="icon"
+        class="menu__img"
+      />
+    </button>
   </div>
   <div class="menu__border"></div>
   <nav class="menu__nav">

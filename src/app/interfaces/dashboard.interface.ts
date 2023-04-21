@@ -9,3 +9,9 @@ export interface DragScrollItem {
   text: string;
   value: string;
 }
+
+export interface CardItemProfile {
+  image: string;
+  text: string;
+  value: number;
+}
