@@ -58,6 +58,11 @@
     align-items: center;
     gap: 1.5rem;
 
+    .form__icon {
+      -webkit-filter: invert(1);
+      filter: invert(1);
+    }
+
     .form__input,
     .form__submit {
       border-radius: 10px;
