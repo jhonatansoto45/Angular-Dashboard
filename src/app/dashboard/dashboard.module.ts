@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { NgChartsModule } from 'ng2-charts';
+import { ChartModule } from 'primeng/chart';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HomeComponent } from './pages/home/home.component';
@@ -12,6 +13,7 @@ import { CardItemComponent } from './components/card-item/card-item.component';
 import { ImagePipe } from './pipe/image.pipe';
 import { GraphicsComponent } from './components/graphics/graphics.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
+import { TasksComponent } from './components/tasks/tasks.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
     ImagePipe,
     GraphicsComponent,
     StatisticsComponent,
+    TasksComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     DragScrollModule,
     NgChartsModule,
+    ChartModule
   ],
 })
 export class DashboardModule {}

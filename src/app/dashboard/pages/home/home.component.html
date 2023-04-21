@@ -19,14 +19,12 @@
         <span class="welcome__text__btn"> Ver Sugerencias </span>
       </button>
     </article>
-    <app-scroll-items [ngStyle]="{ width: '100%' }"></app-scroll-items>
+    <app-scroll-items [ngStyle]="{ width: '100%' }" />
   </section>
 
-  <section [ngStyle]="{ width: '100%' }">
-    <app-card-item></app-card-item>
-  </section>
+  <app-card-item />
 
-  <section class="statistic">
-    <app-statistics></app-statistics>
-  </section>
+  <app-statistics />
+
+  <app-tasks />
 </main>
