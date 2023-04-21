@@ -15,7 +15,15 @@
   overflow: hidden;
 }
 
-.statistics__line {
+.statistics__name {
+  font-weight: var(--font-bold);
+}
+
+.statistics__bar {
+  width: 55%;
+}
+
+/* .statistics__line {
   width: 700px;
   height: 380px;
 }
@@ -44,4 +52,4 @@
     width: 90%;
     margin: 0 auto;
   }
-}
+} */

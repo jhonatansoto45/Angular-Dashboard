@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DragScrollModule } from 'ngx-drag-scroll';
-import { NgChartsModule } from 'ng2-charts';
 import { ChartModule } from 'primeng/chart';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -31,8 +30,7 @@ import { TasksComponent } from './components/tasks/tasks.component';
     CommonModule,
     DashboardRoutingModule,
     DragScrollModule,
-    NgChartsModule,
-    ChartModule
+    ChartModule,
   ],
 })
 export class DashboardModule {}
