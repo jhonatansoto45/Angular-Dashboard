@@ -1,1 +1,71 @@
-<p>signin works!</p>
+<section class="container">
+  <section class="banner">
+    <div>
+      <h1 class="banner__title">Bienvenido!</h1>
+      <p class="banner__description">
+        Nos esforzamos por ser la mejor plataforma del mercado para la gestión
+        de equipos y proyectos. Ahora, estamos ampliando nuestro alcance al
+        proporcionar una experiencia educativa excepcional para tus
+        colaboradores, todo dentro del mismo sistema y a solo un clic de
+        distancia.
+      </p>
+    </div>
+  </section>
+
+  <section class="login">
+    <form action="" class="login__form">
+      <h2>Inicio de sesion</h2>
+      <div>
+        <label for="email">
+          <picture>
+            <img src="../../../../assets/images/icons/email.svg" alt="email" />
+          </picture>
+        </label>
+        <input
+          class="form__input"
+          name="email"
+          type="email"
+          placeholder="Correo electronico"
+          required
+        />
+      </div>
+      <div>
+        <label for="password">
+          <picture>
+            <img
+              src="../../../../assets/images/icons/password.svg"
+              alt="password"
+            />
+          </picture>
+        </label>
+        <input
+          class="form__input"
+          name="password"
+          type="password"
+          placeholder="Contraseña"
+          required
+        />
+      </div>
+      <button class="form__btn" type="submit">
+        <Span>Ingresar</Span>
+      </button>
+      <div class="form__others">
+        <button class="others__btn">
+          <picture class="others__picture">
+            <img
+              src="../../../../assets/images/icons/google.svg"
+              alt="google"
+              class="others__logo"
+            />
+          </picture>
+        </button>
+      </div>
+      <p>
+        Aun no estas registrado?
+        <a routerLink="/init/signup" class="form__signup">
+          <span>Crear cuenta.</span>
+        </a>
+      </p>
+    </form>
+  </section>
+</section>
