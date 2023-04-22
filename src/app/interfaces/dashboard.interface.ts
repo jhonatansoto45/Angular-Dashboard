@@ -15,3 +15,11 @@ export interface CardItemProfile {
   text: string;
   value: number;
 }
+
+export interface IProjectInfo {
+  id: number;
+  name: string;
+  members: number;
+  creationDate: string;
+  description: string;
+}
