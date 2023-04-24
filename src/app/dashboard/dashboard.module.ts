@@ -13,24 +13,29 @@ import { ImagePipe } from './pipe/image.pipe';
 import { GraphicsComponent } from './components/graphics/graphics.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { TasksComponent } from './components/tasks/tasks.component';
+import { ProjectInfoComponent } from './pages/project-info/project-info.component';
+import { CardProjectComponent } from './components/card-project/card-project.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     DetailsComponent,
     ProjectsComponent,
+    ProjectInfoComponent,
     ScrollItemsComponent,
     CardItemComponent,
     ImagePipe,
     GraphicsComponent,
     StatisticsComponent,
     TasksComponent,
+    CardProjectComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     DragScrollModule,
     ChartModule,
+
   ],
 })
 export class DashboardModule {}

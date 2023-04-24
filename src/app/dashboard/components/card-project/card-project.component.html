@@ -1,0 +1,16 @@
+<a [routerLink]="projectInfo.name">
+  <div class="card">
+    <h2 class="card__title" [title]="projectInfo.name">
+      {{ projectInfo.name }}
+    </h2>
+    <p class="card__info">created: {{ projectInfo.creationDate }}</p>
+    <p class="card__info">members: {{ projectInfo.members }}</p>
+    <picture class="card__picture">
+      <img
+        src="../../../../assets/images/icons/arrow-right.svg"
+        alt="right arrow"
+        class="picture__img"
+      />
+    </picture>
+  </div>
+</a>
