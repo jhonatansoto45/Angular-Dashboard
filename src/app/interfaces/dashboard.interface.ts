@@ -29,3 +29,10 @@ export interface IProjectInfo {
   creationDate: string;
   description: string;
 }
+
+export interface TasksDataTable {
+  company: string;
+  members: number;
+  budget: number;
+  termination: number;
+}

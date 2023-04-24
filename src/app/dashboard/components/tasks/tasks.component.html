@@ -15,15 +15,15 @@
         <th>Presupuesto</th>
         <th>Terminación</th>
       </tr>
-      <tr>
-        <td>Versión de interfaz de usuario suave de Chakra</td>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.company }}</td>
         <th></th>
         <th></th>
         <th></th>
         <th></th>
-        <td>4</td>
-        <td>$14,000</td>
-        <td>60%</td>
+        <td>{{ task.members }}</td>
+        <td>${{ task.budget | number }}</td>
+        <td>% {{ task.termination }}</td>
       </tr>
     </table>
   </article>

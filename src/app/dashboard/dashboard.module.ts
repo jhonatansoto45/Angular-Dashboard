@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DragScrollModule } from 'ngx-drag-scroll';
 import { ChartModule } from 'primeng/chart';
+import { DragScrollModule } from 'ngx-drag-scroll';
+import { TableModule } from 'primeng/table';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HomeComponent } from './pages/home/home.component';
@@ -32,10 +33,10 @@ import { CardProjectComponent } from './components/card-project/card-project.com
   ],
   imports: [
     CommonModule,
+    ChartModule,
     DashboardRoutingModule,
     DragScrollModule,
-    ChartModule,
-
+    TableModule
   ],
 })
 export class DashboardModule {}

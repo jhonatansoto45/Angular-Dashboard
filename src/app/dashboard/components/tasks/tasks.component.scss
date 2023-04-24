@@ -15,8 +15,36 @@
   height: 350px;
 }
 
+
+.tasks__projects::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.tasks__projects::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+.tasks__projects::-webkit-scrollbar-button:increment,.tasks__projects::-webkit-scrollbar-button {
+  display: none;
+}
+
+.tasks__projects::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.tasks__projects::-webkit-scrollbar-thumb {
+  background-color: var(--color-icon);
+  border-radius: 20px;
+  border: 1px solid var(--color-text);
+}
+
+.tasks__projects::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
 .tasks__projects {
   width: 70%;
+  overflow-y: scroll;
 }
 
 .tasks__todo {
