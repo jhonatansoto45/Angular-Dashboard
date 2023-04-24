@@ -4,6 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   width: 95%;
+  margin-bottom: 45px;
 }
 
 .status__card {
@@ -46,4 +47,18 @@
   color: var(--color-text);
   font-size: var(--font-size-sm);
   font-weight: var(--font-bold);
+}
+
+@media screen and (max-width: 1300px) {
+  .status {
+    width: 100%;
+    gap: 7px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .status__card {
+    width: 100%;
+    padding: 0 15px;
+  }
 }

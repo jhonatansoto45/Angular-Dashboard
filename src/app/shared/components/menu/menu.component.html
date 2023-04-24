@@ -22,6 +22,7 @@
       *ngFor="let link of menuList"
       [routerLink]="link.route"
       routerLinkActive="menu__active"
+      (click)="disabledMenu()"
     >
       <div class="menu__img__icon">
         <img [src]="link.icon" [alt]="link.name" class="menu__icon" />

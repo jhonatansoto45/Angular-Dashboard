@@ -16,10 +16,23 @@ export interface CardItemProfile {
   value: number;
 }
 
+export enum TypeChart {
+  line = 'line',
+  pie = 'pie',
+  bar = 'bar',
+  radar = 'radar',
+}
 export interface IProjectInfo {
   id: number;
   name: string;
   members: number;
   creationDate: string;
   description: string;
+}
+
+export interface TasksDataTable {
+  company: string;
+  members: number;
+  budget: number;
+  termination: number;
 }

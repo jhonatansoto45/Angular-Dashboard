@@ -1,9 +1,15 @@
-<div class="welcome__contain">
+<div class="scroll__contain">
   <drag-scroll class="scroll" [scrollbar-hidden]="true">
-    <div class="card" *ngFor="let item of dragItem">
-      <img class="card__img" [src]="item.image" alt="Illustrations" srcset="" />
-      <p class="card__text">{{ item.text }}</p>
-      <sub class="card__value"> {{ item.value }} </sub>
-    </div>
+    <ng-container  [ngTemplateOutlet]="card"></ng-container>
   </drag-scroll>
 </div>
+
+<ng-template #card>
+  <div class="card" drag-scroll-item *ngFor="let item of dragItem">
+    <picture  class="card__picture">
+      <img class="card__img" [src]="item.image" alt="Illustrations" />
+    </picture>
+    <p class="card__text">{{ item.text }}</p>
+    <sub class="card__value"> {{ item.value }} </sub>
+  </div>
+</ng-template>

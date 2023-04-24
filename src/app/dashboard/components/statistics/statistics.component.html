@@ -1,0 +1,10 @@
+<div class="statistics__contain">
+  <div class="statistics__bar statistics">
+    <span class="statistics__name"> Resumen de ventas</span>
+    <app-graphics [graphType]="type.bar" [data]="barChartData" />
+  </div>
+  <div class="statistics__pie statistics">
+    <span class="statistics__name"> Total de ventas</span>
+    <app-graphics [graphType]="type.pie" [data]="pieChartData" />
+  </div>
+</div>

@@ -4,6 +4,7 @@
   src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
   src: url(assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf);
 }
+@import "primeng/resources/primeng.css";
 
 * {
   padding: 0;
@@ -23,6 +24,8 @@
   --color-icon: #582cff;
   --title-size: 2.5rem;
   --border-radius: 12px;
+  --green-color-bar: #05c997;
+  --gray: #919EB1;
   --background-contain: linear-gradient(
       127.09deg,
       rgba(6, 11, 40, 0.94) 19.41%,
@@ -46,4 +49,5 @@ body {
   background-image: url(./assets/images/background-body.png);
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
 }

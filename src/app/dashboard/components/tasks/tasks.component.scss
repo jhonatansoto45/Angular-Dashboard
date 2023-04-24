@@ -1,0 +1,96 @@
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.tasks__projects,
+.tasks__todo {
+  border-radius: var(--border-radius);
+  background: var(--background-contain);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s linear 0s;
+  padding: 15px;
+  height: 350px;
+}
+
+
+.tasks__projects::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.tasks__projects::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+.tasks__projects::-webkit-scrollbar-button:increment,.tasks__projects::-webkit-scrollbar-button {
+  display: none;
+}
+
+.tasks__projects::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.tasks__projects::-webkit-scrollbar-thumb {
+  background-color: var(--color-icon);
+  border-radius: 20px;
+  border: 1px solid var(--color-text);
+}
+
+.tasks__projects::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.tasks__projects {
+  width: 70%;
+  overflow-y: scroll;
+}
+
+.tasks__todo {
+  width: 30%;
+}
+
+.tasks__title {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-bold);
+}
+
+.tasks__legend {
+  margin-bottom: 15px;
+}
+
+.tasks__text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-bold);
+  color: var(--gray);
+  margin-top: 15px;
+}
+
+.tasks__text::before {
+  content: url(../../../../assets/images/icons/check.svg);
+  background: var(--green-color-bar);
+  width: 24px;
+  height: 23px;
+  border-radius: 50%;
+}
+
+.tasks__table {
+  border-collapse: collapse;
+  overflow: hidden;
+
+  th,
+  td {
+    padding: 1em;
+    border-bottom: 2px solid var(--gray);
+  }
+
+  th {
+    color: var(--gray);
+  }
+}

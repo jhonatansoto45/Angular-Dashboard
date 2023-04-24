@@ -1,0 +1,31 @@
+<section class="tasks">
+  <article class="tasks__projects">
+    <p class="tasks__title">Proyectos</p>
+    <div class="tasks__legend">
+      <span class="tasks__text">30 hecho este mes.</span>
+    </div>
+    <table class="tasks__table">
+      <tr>
+        <th>Compañías</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Miembros</th>
+        <th>Presupuesto</th>
+        <th>Terminación</th>
+      </tr>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.company }}</td>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <td>{{ task.members }}</td>
+        <td>${{ task.budget | number }}</td>
+        <td>% {{ task.termination }}</td>
+      </tr>
+    </table>
+  </article>
+  <article class="tasks__todo"></article>
+</section>
