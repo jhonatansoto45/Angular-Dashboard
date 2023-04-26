@@ -1,6 +1,29 @@
-<div>
-  <app-card-project
-    *ngFor="let project of projectsList"
-    [projectInfo]="project"
-  ></app-card-project>
+<div class="scroll__contain">
+  <drag-scroll class="scroll" [scrollbar-hidden]="true">
+    <ng-container [ngTemplateOutlet]="card"></ng-container>
+  </drag-scroll>
 </div>
+
+<ng-template #card>
+  <a
+    [routerLink]="project.name"
+    class="card"
+    drag-scroll-item
+    *ngFor="let project of projectsList; let i = index"
+  >
+    <div>
+      <p class="link__name">
+        <b>{{ project.name }}</b>
+      </p>
+      <sub class="link__date">Creado: {{ project.creationDate }} </sub>
+      <sub class="link__members">Miembros: {{ project.members }} </sub>
+      <picture class="link__picture">
+        <img
+          src="../../../../assets/images/icons/arrow-right.svg"
+          alt="go to the project img"
+          class="picture__image"
+        />
+      </picture>
+    </div>
+  </a>
+</ng-template>

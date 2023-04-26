@@ -1,4 +1,93 @@
-div {
+// projects list
+.scroll__contain {
+  position: relative;
   display: flex;
   gap: 2rem;
+  background: var(--bg-dark-gradient);
+  background: var(--bg-glass-gray);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s linear 0s;
+  width: 90%;
+  height: 270px;
+  margin: 0 auto;
+}
+
+.scroll {
+  width: 90%;
+  height: 100%;
+  place-content: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.card {
+  color: var(--color-text);
+  text-decoration: none;
+  width: 50%;
+  height: 180px;
+  padding: 25px;
+  background: var(--bg-dark-gradient);
+  margin: 45px 15px 0 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+
+  .link__name {
+    width: 100%;
+    height: 19px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .link__date,
+  .link__members {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .link__picture .picture__image {
+    position: absolute;
+    filter: var(--invert-white-color);
+    right: 30px;
+    bottom: 20px;
+    transition: 0.4s ease-in-out;
+  }
+  &:hover {
+    filter: brightness(120%);
+
+    &:hover .link__picture .picture__image {
+      bottom: 28px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .scroll__contain {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .scroll__contain {
+    padding: 15px;
+  }
+
+  .card {
+    display: flex !important;
+    width: 95%;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 0 11px 0;
+  }
+
+  .link__date,
+  .link__members {
+    margin-top: 0;
+  }
 }

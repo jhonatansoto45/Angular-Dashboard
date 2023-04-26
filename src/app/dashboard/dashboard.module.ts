@@ -36,7 +36,7 @@ import { CardProjectComponent } from './components/card-project/card-project.com
     ChartModule,
     DashboardRoutingModule,
     DragScrollModule,
-    TableModule
+    TableModule,
   ],
 })
 export class DashboardModule {}
