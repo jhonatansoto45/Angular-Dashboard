@@ -25,7 +25,7 @@
   --title-size: 2.5rem;
   --border-radius: 12px;
   --green-color-bar: #05c997;
-  --gray: #919EB1;
+  --gray: #919eb1;
   --background-contain: linear-gradient(
       127.09deg,
       rgba(6, 11, 40, 0.94) 19.41%,
@@ -37,6 +37,10 @@
     rgba(6, 11, 38, 0.94) 59.3%,
     rgba(26, 31, 55, 0) 100%
   );
+
+  --box-shadow: rgba(145, 158, 171, 0.2) 0px 2px 1px -1px,
+    rgba(145, 158, 171, 0.14) 0px 1px 1px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 3px 0px;
 
   // for the svg icons
   --invert-purple-color: invert(18%) sepia(95%) saturate(4717%)

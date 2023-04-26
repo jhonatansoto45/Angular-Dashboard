@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TasksDataTable } from 'src/app/interfaces';
+import { TaskService } from './service/task.service';
 
 @Component({
   selector: 'app-tasks',
@@ -7,42 +7,17 @@ import { TasksDataTable } from 'src/app/interfaces';
   styleUrls: ['./tasks.component.scss'],
 })
 export class TasksComponent {
-  tasks: TasksDataTable[] = [
-    {
-      company: 'Versión de interfaz de usuario suave de Chakra',
-      members: 4,
-      budget: 140000,
-      termination: 60,
-    },
-    {
-      company: 'Versión de interfaz de usuario suave de Chakra',
-      members: 2,
-      budget: 520000,
-      termination: 40,
-    },
-    {
-      company: 'Versión de interfaz de usuario suave de Chakra',
-      members: 4,
-      budget: 140000,
-      termination: 60,
-    },
-    {
-      company: 'Versión de interfaz de usuario suave de Chakra',
-      members: 4,
-      budget: 140000,
-      termination: 60,
-    },
-    {
-      company: 'Versión de interfaz de usuario suave de Chakra',
-      members: 4,
-      budget: 140000,
-      termination: 60,
-    },
-    {
-      company: 'Versión de interfaz de usuario suave de Chakra',
-      members: 4,
-      budget: 140000,
-      termination: 60,
-    },
-  ];
+  constructor(private taskService: TaskService) {}
+
+  get gridData() {
+    return this.taskService.tasks;
+  }
+
+  get order() {
+    return this.taskService.order;
+  }
+
+  get social() {
+    return this.taskService.social;
+  }
 }

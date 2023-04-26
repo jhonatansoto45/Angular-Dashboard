@@ -36,3 +36,9 @@ export interface TasksDataTable {
   budget: number;
   termination: number;
 }
+
+export interface TaskOrderType {
+  message: string;
+  date: Date | string;
+  color: string;
+}

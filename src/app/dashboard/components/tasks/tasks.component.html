@@ -15,7 +15,7 @@
         <th>Presupuesto</th>
         <th>Terminación</th>
       </tr>
-      <tr *ngFor="let task of tasks">
+      <tr *ngFor="let task of gridData">
         <td>{{ task.company }}</td>
         <th></th>
         <th></th>
@@ -27,5 +27,34 @@
       </tr>
     </table>
   </article>
-  <article class="tasks__todo"></article>
+  <article class="tasks__todo">
+    <h2 class="tasks__info">Calendario de pedidos</h2>
+    <ul class="tasks__list">
+      <li class="tasks__item" *ngFor="let item of order">
+        <div class="tasks__progress">
+          <span class="tasks__dot" [style.backgroundColor]="item.color"></span>
+          <span class="tasks__line"></span>
+        </div>
+        <div class="tasks__description">
+          <h6 class="tasks__titleOrder">{{ item.message }}</h6>
+          <span class="tasks__textOrder">{{ item.date }}</span>
+        </div>
+      </li>
+    </ul>
+  </article>
+</section>
+
+<section class="social">
+  <h2 class="social__title">Tráfico por sitio</h2>
+  <article class="social__traffic">
+    <div class="social__network" *ngFor="let network of social">
+      <img
+        [src]="network.image | image"
+        [alt]="network.text"
+        class="social__logo"
+      />
+      <h3 class="social__follow">{{ network.value }}</h3>
+      <span class="social__name">{{ network.text }}</span>
+    </div>
+  </article>
 </section>
