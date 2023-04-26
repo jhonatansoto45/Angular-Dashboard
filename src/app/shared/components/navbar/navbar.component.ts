@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Event, NavigationEnd, Router, RouterModule } from '@angular/router';
-import { SharedService } from '../../services/shared.service';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   standalone: true,
@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.router.events.subscribe((event: Event) => {
-      if (event instanceof NavigationEnd) {
+      if (event instanceof NavigationEnd || this.router.url) {
         const route = this.router.url.split('/');
         this.currPage = route[route.length - 1];
       }
