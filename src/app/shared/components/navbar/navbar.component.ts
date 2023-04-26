@@ -3,7 +3,6 @@ import { Event, NavigationEnd, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { SharedService } from '../../services/shared.service';
-import { log } from 'console';
 
 @Component({
   standalone: true,
