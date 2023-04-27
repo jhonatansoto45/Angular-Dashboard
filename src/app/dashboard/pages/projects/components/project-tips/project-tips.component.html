@@ -1,0 +1,8 @@
+<section class="container">
+  <div class="card" *ngFor="let tip of tips">
+    <p class="card__tip">"{{ tip.tip }}"</p>
+    <picture class="card__picture">
+      <img [src]="tip.image" alt="illustration image" class="card__image" />
+    </picture>
+  </div>
+</section>

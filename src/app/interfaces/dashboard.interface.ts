@@ -22,12 +22,19 @@ export enum TypeChart {
   bar = 'bar',
   radar = 'radar',
 }
+
 export interface IProjectInfo {
   id: number;
   name: string;
   members: number;
   creationDate: string;
   description: string;
+}
+
+export interface ITip {
+  id: number;
+  tip: string;
+  image: string;
 }
 
 export interface TasksDataTable {

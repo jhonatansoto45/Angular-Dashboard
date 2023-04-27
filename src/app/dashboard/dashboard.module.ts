@@ -16,6 +16,7 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
 import { TasksComponent } from './components/tasks/tasks.component';
 import { ProjectInfoComponent } from './pages/project-info/project-info.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
+import { ProjectTipsComponent } from './pages/projects/components/project-tips/project-tips.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CardProjectComponent } from './components/card-project/card-project.com
     StatisticsComponent,
     TasksComponent,
     CardProjectComponent,
+    ProjectTipsComponent,
   ],
   imports: [
     CommonModule,
