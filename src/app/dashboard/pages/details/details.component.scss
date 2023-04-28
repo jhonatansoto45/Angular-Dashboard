@@ -1,0 +1,39 @@
+.table {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.authors {
+  width: 100%;
+  border-radius: var(--border-radius);
+  background: var(--background-contain);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s linear 0s;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.tr {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.table__img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.projects {
+  width: 100%;
+  border-radius: var(--border-radius);
+  background: var(--background-contain);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s linear 0s;
+  padding: 15px;
+  overflow: hidden;
+  margin: 50px 0;
+}

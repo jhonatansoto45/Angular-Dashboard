@@ -1,1 +1,74 @@
-<p>details works!</p>
+<div class="table">
+  <section class="authors">
+    <h1 class="authors__title">Autores</h1>
+    <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Quantity</th>
+          <th>Quantity</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+        <tr>
+          <td class="tr">
+            <img [src]="product.image" alt="" class="table__img" />{{
+              product.name
+            }}
+          </td>
+          <td>{{ product.category }}</td>
+          <td>
+            <p-rating
+              [ngModel]="product.quantity"
+              [readonly]="true"
+              [cancel]="false"
+            ></p-rating>
+          </td>
+          <td>
+            <p-tag
+              [value]="product.inventoryStatus"
+              [severity]="getSeverity(product.inventoryStatus)"
+            ></p-tag>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </section>
+  <section class="projects">
+    <h1 class="projects__title">Projects</h1>
+    <p-table [value]="projects" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Quantity</th>
+          <th>Quantity</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+        <tr>
+          <td class="tr">
+            <img [src]="product.image" alt="" class="table__img" />{{
+              product.name
+            }}
+          </td>
+          <td>{{ product.category }}</td>
+          <td>
+            <p-rating
+              [ngModel]="product.quantity"
+              [readonly]="true"
+              [cancel]="false"
+            ></p-rating>
+          </td>
+          <td>
+            <p-tag
+              [value]="product.inventoryStatus"
+              [severity]="getSeverity(product.inventoryStatus)"
+            ></p-tag>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </section>
+</div>

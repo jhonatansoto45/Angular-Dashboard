@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { ChartModule } from 'primeng/chart';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { TableModule } from 'primeng/table';
+import { RatingModule } from 'primeng/rating';
+import { TagModule } from 'primeng/tag';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HomeComponent } from './pages/home/home.component';
@@ -35,10 +38,13 @@ import { ProjectTipsComponent } from './pages/projects/components/project-tips/p
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ChartModule,
     DashboardRoutingModule,
     DragScrollModule,
     TableModule,
+    RatingModule,
+    TagModule
   ],
 })
 export class DashboardModule {}
