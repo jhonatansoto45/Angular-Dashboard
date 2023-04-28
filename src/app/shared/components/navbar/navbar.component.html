@@ -1,5 +1,5 @@
 <header class="header">
-  <button  class="header__menu" (click)="activeMenu()">
+  <button class="header__menu" (click)="activeMenu()">
     <img
       src="../../../../assets/images/icons/menu.svg"
       alt="icon"
@@ -7,7 +7,10 @@
     />
   </button>
   <nav class="navbar">
-    <span class="navbar__currPage"> Pagina / {{ currPage }} </span>
+    <span class="navbar__currPage">
+      Pagina / {{ currPage }}
+      <span *ngIf="currChildrenPage !== ''">/ {{ currChildrenPage }}</span>
+    </span>
     <a routerLink="auth/login" class="navbar__link">
       <picture class="navbar__picture">
         <img

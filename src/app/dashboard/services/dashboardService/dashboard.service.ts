@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class DashboardService {
-
   getHoursDate(): string {
     const hour = new Date().getHours();
     return hour >= 1 && hour < 12

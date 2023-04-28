@@ -13,6 +13,8 @@ import { SharedService } from '../../services/shared.service';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   currPage = '';
+  currChildrenPage = '';
+  isLoadingChildrenRoute = false;
   isActiveMenu = false;
   menu: Subscription = new Subscription();
 
@@ -22,7 +24,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd || this.router.url) {
         const route = this.router.url.split('/');
-        this.currPage = route[route.length - 1];
+        if (route.length > 3) {
+          this.getChildrenUrlName(route);
+        } else {
+          this.currPage = route[route.length - 1];
+          this.currChildrenPage = '';
+        }
       }
     });
 
@@ -38,5 +45,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
   activeMenu(): void {
     this.isActiveMenu = true;
     this.sharedService.activeMenu$.next(true);
+  }
+
+  getChildrenUrlName(route: string[]): void {
+    this.currPage = route[route.length - 2];
+
+    //get the projects/:children route name
+    let childrenPageName = '';
+    route[route.length - 1]
+      .split('%20')
+      .forEach((item) => (childrenPageName += ' ' + item));
+    this.currChildrenPage = childrenPageName;
   }
 }
