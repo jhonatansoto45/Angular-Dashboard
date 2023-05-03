@@ -1,2 +1,23 @@
 <p>project-info works!</p>
 <a routerLink="/dashboard/projects">go bak</a>
+<section class="board">
+  <section class="board__wrapper">
+    <div class="board__columns" cdkDropListGroup>
+      <div class="board__column" *ngFor="let column of board.columns">
+        <div class="column__title">
+          {{ column.col.name }}
+        </div>
+        <div
+          class="tasks__container"
+          cdkDropList
+          [cdkDropListData]="column.col.tasks"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div class="task" *ngFor="let item of column.col.tasks" cdkDrag>
+            {{ item }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

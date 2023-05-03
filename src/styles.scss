@@ -1,12 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: "Plus Jakarta Sans";
-  src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf) format('truetype');
+  src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf)
+    format("truetype");
 }
 
 @font-face {
   font-family: "Plus Jakarta Sans";
-  src: url(assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf) format('truetype');
+  src: url(assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf)
+    format("truetype");
 }
 
 @import "primeng/resources/primeng.css";
@@ -32,6 +34,12 @@
   --green-color-bar: #05c997;
   --gray: #919eb1;
   --bg-glass-gray: rgba(221, 221, 221, 0.041);
+  --background-contain-light: linear-gradient(
+      127.09deg,
+      rgba(23, 10, 54, 0.788) 19.41%,
+      rgba(14, 20, 48, 0.356) 76.65%
+    )
+    border-box;
   --background-contain: linear-gradient(
       127.09deg,
       rgba(6, 11, 40, 0.94) 19.41%,

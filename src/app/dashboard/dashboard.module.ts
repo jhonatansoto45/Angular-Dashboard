@@ -21,6 +21,8 @@ import { ProjectInfoComponent } from './pages/project-info/project-info.componen
 import { CardProjectComponent } from './components/card-project/card-project.component';
 import { ProjectTipsComponent } from './pages/projects/components/project-tips/project-tips.component';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -44,7 +46,8 @@ import { ProjectTipsComponent } from './pages/projects/components/project-tips/p
     DragScrollModule,
     TableModule,
     RatingModule,
-    TagModule
+    TagModule,
+    DragDropModule,
   ],
 })
 export class DashboardModule {}

@@ -49,3 +49,26 @@ export interface TaskOrderType {
   date: Date | string;
   color: string;
 }
+
+export interface IKanban {
+  columns: [
+    {
+      col: {
+        name: string;
+        tasks: string[];
+      };
+    },
+    {
+      col: {
+        name: string;
+        tasks: string[];
+      };
+    },
+    {
+      col: {
+        name: string;
+        tasks: string[];
+      };
+    }
+  ];
+}
