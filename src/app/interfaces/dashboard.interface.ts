@@ -51,24 +51,10 @@ export interface TaskOrderType {
 }
 
 export interface IKanban {
-  columns: [
-    {
-      col: {
-        name: string;
-        tasks: string[];
-      };
-    },
-    {
-      col: {
-        name: string;
-        tasks: string[];
-      };
-    },
-    {
-      col: {
-        name: string;
-        tasks: string[];
-      };
-    }
-  ];
+  columns: IKanbanColumn[];
+}
+
+export interface IKanbanColumn {
+  name: string;
+  tasks: string[];
 }

@@ -5,15 +5,15 @@
     <div class="board__columns" cdkDropListGroup>
       <div class="board__column" *ngFor="let column of board.columns">
         <div class="column__title">
-          {{ column.col.name }}
+          {{ column.name }}
         </div>
         <div
           class="tasks__container"
           cdkDropList
-          [cdkDropListData]="column.col.tasks"
+          [cdkDropListData]="column.tasks"
           (cdkDropListDropped)="drop($event)"
         >
-          <div class="task" *ngFor="let item of column.col.tasks" cdkDrag>
+          <div class="task" *ngFor="let item of column.tasks" cdkDrag>
             {{ item }}
           </div>
         </div>
