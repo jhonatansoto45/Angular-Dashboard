@@ -2,16 +2,17 @@
 :host {
   ::ng-deep {
     .active {
-      background: var(--color-icon) !important;
+      background: var(--primary-color) !important;
       border-radius: var(--border-radius);
+      color: var(--primary-color-text);
     }
 
     .p-dialog-header-close-icon {
-      color: var(--color-text);
+      color: var(--primary-color-text);
       transition: var(--hover-items-transition);
 
       &:hover {
-        color: var(--green-color-bar);
+        color: var(--secondary-color);
       }
     }
   }
@@ -21,12 +22,12 @@
 .board__actions {
   display: flex;
   width: 100%;
-  justify-content: end;
+  justify-content: space-between;
   padding: 0 5%;
 
   .actions__add {
     background: var(--bg-dark-gradient);
-    color: var(--color-text);
+    color: var(--primary-color-text);
     display: inline-block;
     cursor: pointer;
     border-radius: var(--border-radius);
@@ -36,8 +37,21 @@
     font-weight: bold;
 
     &:hover {
-      background: var(--green-color-bar);
-      color: var(--color-text-black);
+      background: var(--secondary-color);
+      color: var(--secondary-color-text);
+    }
+  }
+
+  .action__back {
+    color: var(--primary-color-text);
+    text-decoration: none;
+    transition: var(--hover-items-transition);
+    border-radius: var(--border-radius);
+    padding: 0.3rem 0.5rem;
+
+    &:hover {
+      background: var(--bg-glass-gray);
+      color: var(--secondary-color);
     }
   }
 }
@@ -52,14 +66,14 @@
     border-radius: var(--border-radius);
     padding: 0.3rem;
     border: none;
-    color: var(--color-text-black);
+    color: var(--secondary-color-text);
   }
 
   .dialog__task {
     width: 100%;
 
     &:focus {
-      background: var(--color-text-white-hover);
+      background: var(--color-hover-text);
       outline: none;
     }
   }
@@ -70,8 +84,8 @@
     transition: var(--hover-items-transition);
 
     &:hover {
-      background-color: var(--green-color-bar);
-      color: var(--color-text);
+      background-color: var(--secondary-color);
+      color: var(--primary-color-text);
     }
   }
 }
@@ -91,7 +105,7 @@
     .board__name {
       font-size: 20px;
       font-weight: bold;
-      color: var(--color-text);
+      color: var(--primary-color-text);
     }
   }
 
@@ -121,6 +135,7 @@
         }
 
         .column__title {
+          color: var(--primary-color-text);
           font-size: 20px;
           font-weight: 800;
           text-transform: uppercase;
@@ -137,16 +152,20 @@
 }
 
 .task {
-  background: var(--background-contain-light);
+  background: var(--background-contain);
+  color: var(--primary-color-text);
   display: flex;
   padding: 15px 12px;
-  border-bottom: solid 1px var(--color-text);
+  border-bottom: solid 1px var(--primary-color-text);
   border-radius: var(--border-radius);
   margin-bottom: 25px;
   box-shadow: var(--box-shadow);
+  transition: var(--hover-items-transition);
 
   &:hover {
     cursor: grab;
+    color: var(--secondary-color);
+    background: var(--bg-dark-gradient);
   }
 }
 
