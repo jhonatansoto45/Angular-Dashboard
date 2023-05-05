@@ -1,2 +1,51 @@
 <p>project-info works!</p>
 <a routerLink="/dashboard/projects">go bak</a>
+<section class="board">
+  <div class="board__actions">
+    <button class="actions__add" (click)="showDialog('top-right')">
+      Agregar
+    </button>
+    <p-dialog
+      header="Agregar nueva tarea"
+      [(visible)]="visible"
+      [style]="{ width: '300px', padding: '25px' }"
+      [position]="position"
+      class="dialog"
+      styleClass="active"
+    >
+      <div class="dialog__container">
+        <input
+          type="text"
+          class="dialog__task"
+          placeholder="Agrega una nueva tarea"
+          minlength="3"
+          required
+          [(ngModel)]="task"
+        />
+        <button type="button" class="dialig__task--add" (click)="addTask()">
+          Agregar
+        </button>
+      </div>
+    </p-dialog>
+  </div>
+
+  <section class="board__wrapper">
+    <div class="board__columns" cdkDropListGroup>
+      <div class="board__column" *ngFor="let column of board.columns">
+        <div class="column__title">
+          {{ column.name }}
+        </div>
+        <div
+          class="tasks__container"
+          cdkDropList
+          [cdkDropListData]="column.tasks"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div class="task" *ngFor="let item of column.tasks" cdkDrag>
+            {{ item }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

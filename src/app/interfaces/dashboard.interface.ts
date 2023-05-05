@@ -49,3 +49,12 @@ export interface TaskOrderType {
   date: Date | string;
   color: string;
 }
+
+export interface IKanban {
+  columns: IKanbanColumn[];
+}
+
+export interface IKanbanColumn {
+  name: string;
+  tasks: string[];
+}
