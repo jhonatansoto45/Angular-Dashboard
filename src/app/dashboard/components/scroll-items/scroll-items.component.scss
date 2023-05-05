@@ -40,13 +40,14 @@
 }
 
 .card__text {
-  color: var(--color-text);
+  color: var(--primary-color-text);
   font-size: var(--font-size-sm);
   text-align: center;
   font-weight: var(--font-bold);
 }
 
 .card__value {
+  color: var(--primary-color-text);
   display: inline-block;
   width: 100%;
   text-align: center;

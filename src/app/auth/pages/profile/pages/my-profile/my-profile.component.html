@@ -1,0 +1,100 @@
+<div class="profile">
+  <section class="info">
+    <picture class="profile__picture">
+      <img
+        src="../../../../../../assets/images/user.jpg"
+        alt="Avatar User"
+        class="profile__img"
+      />
+    </picture>
+    <div class="profile__description">
+      <h2 class="profile__name">Leanne Graham</h2>
+      <p class="profile__role">Director de Proyectos</p>
+      <p class="profile__country">Bogotá Colombia</p>
+    </div>
+    <button class="btn__edit">Editar</button>
+  </section>
+
+  <section class="personal">
+    <div class="personal__control">
+      <p class="personal__title">Información personal</p>
+      <button class="btn__edit">Editar</button>
+    </div>
+    <article class="personal__article">
+      <ng-container [ngTemplateOutlet]="personalForm"></ng-container>
+    </article>
+  </section>
+
+  <section class="address">
+    <div class="address__control">
+      <p class="address__title">Dirección</p>
+      <button class="btn__edit">Editar</button>
+    </div>
+    <article class="address__article">
+      <ng-container [ngTemplateOutlet]="addressForm"></ng-container>
+    </article>
+  </section>
+</div>
+
+<!-- PERSONAL -->
+<ng-template #personalForm>
+  <form class="form">
+    <div class="form__flex">
+      <label for="">
+        <span class="form__name">Primer Nombre</span>
+        <span>Leanne</span>
+      </label>
+
+      <label for="">
+        <span>Primer Apellido</span>
+        <span>Graham</span>
+      </label>
+    </div>
+
+    <div class="form__flex">
+      <label for="">
+        <span>Email</span>
+        <span>leanneGraham@test.com</span>
+      </label>
+      <label for="">
+        <span>Celular</span>
+        <span>(+57) 310 12345678</span>
+      </label>
+    </div>
+
+    <div class="form__flex">
+      <label for="">
+        <span>Cargo</span>
+        <span>Jefe de Equipo</span>
+      </label>
+    </div>
+  </form>
+</ng-template>
+
+<!-- ADDRESS -->
+<ng-template #addressForm>
+  <form class="form">
+    <div class="form__flex">
+      <label for="">
+        <span>Primer Nombre</span>
+        <span>Leanne</span>
+      </label>
+
+      <label for="">
+        <span>Primer Nombre</span>
+        <span>Leanne</span>
+      </label>
+    </div>
+
+    <div class="form__flex">
+      <label for="">
+        <span>Primer Nombre</span>
+        <span>Leanne</span>
+      </label>
+      <label for="">
+        <span>Primer Nombre</span>
+        <span>Leanne</span>
+      </label>
+    </div>
+  </form>
+</ng-template>

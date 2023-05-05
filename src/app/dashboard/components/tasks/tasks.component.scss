@@ -39,9 +39,9 @@
 
 .tasks__projects::-webkit-scrollbar-thumb,
 .tasks__todo::-webkit-scrollbar-thumb {
-  background-color: var(--color-icon);
+  background-color: var(--primary-color);
   border-radius: 20px;
-  border: 1px solid var(--color-text);
+  border: 1px solid var(--primary-color-text);
 }
 
 .tasks__projects::-webkit-scrollbar-track,
@@ -60,7 +60,7 @@
 }
 
 .tasks__title {
-  color: var(--color-text);
+  color: var(--primary-color-text);
   font-size: var(--font-size-sm);
   font-weight: var(--font-bold);
 }
@@ -82,7 +82,7 @@
 
 .tasks__text::before {
   content: url(../../../../assets/images/icons/check.svg);
-  background: var(--green-color-bar);
+  background: var(--secondary-color);
   width: 24px;
   height: 23px;
   border-radius: 50%;
@@ -97,6 +97,7 @@
     padding: 1em;
     border-bottom: 2px solid var(--gray);
     font-size: var(--font-size-sm);
+    color: var(--primary-color-text);
   }
 
   th {
@@ -109,6 +110,7 @@
 .tasks__info {
   font-size: var(--font-size-sm);
   margin-bottom: 15px;
+  color: var(--primary-color-text);
 }
 
 .tasks__item {
@@ -136,7 +138,7 @@
   box-shadow: var(--box-shadow);
   margin: 11.5px 0px;
   border-color: transparent;
-  color: rgb(255, 255, 255);
+  color: var(--primary-color-text)
 }
 
 .tasks__line {
@@ -161,6 +163,7 @@
   font-weight: var(--font-bold);
   line-height: 1.57143;
   font-size: var(--font-size-sm);
+  color: var(--primary-color-text);
 }
 
 .tasks__textOrder {
@@ -180,6 +183,7 @@
 .social__title {
   margin-bottom: 35px;
   text-align: center;
+  color: var(--primary-color-text);
 }
 
 .social__traffic {
@@ -196,7 +200,7 @@
   width: 150px;
   height: 150px;
   border-radius: var(--border-radius);
-  background-color: var(--color-icon);
+  background-color: var(--primary-color);
   font-size: var(--font-size-sm);
   backdrop-filter: blur(10px);
 
@@ -207,11 +211,11 @@
 
   .social__follow {
     margin-top: 15px;
-    color: var(--green-color-bar);
+    color: var(--secondary-color);
   }
 
   .social__name {
-    color: var(--color-text);
+  color: var(--primary-color-text);
   }
 }
 
