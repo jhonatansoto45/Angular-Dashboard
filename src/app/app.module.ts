@@ -11,6 +11,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { SharedModule } from './shared/shared.module';
 import { NavbarComponent } from './shared';
 import { LadingPageNavbarComponent } from './public/components/lading-page-navbar/lading-page-navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { LadingPageNavbarComponent } from './public/components/lading-page-navba
     SharedModule,
     NavbarComponent,
     LadingPageNavbarComponent,
+    BrowserAnimationsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
   ],

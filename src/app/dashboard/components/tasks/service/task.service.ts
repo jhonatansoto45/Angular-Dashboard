@@ -52,27 +52,27 @@ export class TaskService {
     {
       message: '1983, orden, $4220',
       date: '07 Sep 2022 11:28 PM',
-      color: this.generarNuevoColor(),
+      color: this.generateNewColor(),
     },
     {
       message: '1983, orden, $4220',
       date: new Date(),
-      color: this.generarNuevoColor(),
+      color: this.generateNewColor(),
     },
     {
       message: '1983, orden, $4220',
       date: new Date(),
-      color: this.generarNuevoColor(),
+      color: this.generateNewColor(),
     },
     {
       message: '1983, orden, $4220',
       date: new Date(),
-      color: this.generarNuevoColor(),
+      color: this.generateNewColor(),
     },
     {
       message: '1983, orden, $4220',
       date: new Date(),
-      color: this.generarNuevoColor(),
+      color: this.generateNewColor(),
     },
   ];
 
@@ -111,13 +111,13 @@ export class TaskService {
     return this._socialNetwork;
   }
 
-  generarNuevoColor(): string {
-    const totalCharacterHexa = 6;
-    const simbolos = '0123456789ABCDEF';
+  generateNewColor(): string {
+    const totalHexaCharacters = 6;
+    const symbols = '0123456789ABCDEF';
     let color = '#';
 
-    for (let i = 0; i < totalCharacterHexa; i++) {
-      color = color + simbolos[Math.floor(Math.random() * 16)];
+    for (let i = 0; i < totalHexaCharacters; i++) {
+      color = color + symbols[Math.floor(Math.random() * 16)];
     }
 
     return color;
