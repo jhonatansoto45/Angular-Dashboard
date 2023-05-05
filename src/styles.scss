@@ -22,6 +22,7 @@
 
 :root {
   --color-text: #ffffff;
+  --color-text-black: #000000;
   --color-text-white-hover: #dddddd;
   --font-bold: 600;
   --font-size-sm: 0.875rem;
@@ -59,6 +60,9 @@
     hue-rotate(252deg) brightness(98%) contrast(106%); // #582cff
   --invert-white-color: invert(95%) sepia(5%) saturate(0%) hue-rotate(23deg)
     brightness(106%) contrast(107%); // #ffffff
+
+  //transitions
+  --hover-items-transition: 0.4s ease-in-out;
 }
 
 body {

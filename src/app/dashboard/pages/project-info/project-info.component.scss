@@ -1,3 +1,82 @@
+// dialog
+:host {
+  ::ng-deep {
+    .active {
+      background: var(--color-icon) !important;
+      border-radius: var(--border-radius);
+    }
+
+    .p-dialog-header-close-icon {
+      color: var(--color-text);
+      transition: var(--hover-items-transition);
+
+      &:hover {
+        color: var(--green-color-bar);
+      }
+    }
+  }
+}
+
+// board actions
+.board__actions {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  padding: 0 5%;
+
+  .actions__add {
+    background: var(--bg-dark-gradient);
+    color: var(--color-text);
+    display: inline-block;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    padding: 0.3rem 0.5rem;
+    border: none;
+    transition: var(--hover-items-transition);
+    font-weight: bold;
+
+    &:hover {
+      background: var(--green-color-bar);
+      color: var(--color-text-black);
+    }
+  }
+}
+
+.dialog__container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  .dialog__task,
+  .dialig__task--add {
+    border-radius: var(--border-radius);
+    padding: 0.3rem;
+    border: none;
+    color: var(--color-text-black);
+  }
+
+  .dialog__task {
+    width: 100%;
+
+    &:focus {
+      background: var(--color-text-white-hover);
+      outline: none;
+    }
+  }
+
+  .dialig__task--add {
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--hover-items-transition);
+
+    &:hover {
+      background-color: var(--green-color-bar);
+      color: var(--color-text);
+    }
+  }
+}
+
+// board
 .board {
   display: flex;
   flex-direction: column;

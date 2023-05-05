@@ -38,6 +38,10 @@ export class KanbanService {
     ],
   };
 
+  addNewTask(task: string) {
+    this._board.columns[0].tasks.push(task);
+  }
+
   get kanbanData(): IKanban {
     return this._board;
   }

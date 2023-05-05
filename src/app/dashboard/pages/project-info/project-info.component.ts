@@ -14,8 +14,24 @@ import { IKanban } from 'src/app/interfaces';
 })
 export class ProjectInfoComponent implements OnInit {
   board!: IKanban;
+  visible = false;
+  position = '';
+  task = '';
 
   constructor(private kaban: KanbanService) {}
+
+  showDialog(position: string) {
+    this.visible = true;
+    this.position = position;
+  }
+
+  addTask() {
+    if (this.task.length > 3) {
+      this.kaban.addNewTask(this.task);
+      this.visible = false;
+      this.task = '';
+    }
+  }
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
