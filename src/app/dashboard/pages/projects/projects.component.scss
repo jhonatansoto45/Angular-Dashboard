@@ -22,7 +22,7 @@
 }
 
 .card {
-  color: var(--color-text);
+  color: var(--primary-color-text);
   text-decoration: none;
   width: 50%;
   height: 180px;
@@ -44,6 +44,7 @@
   .link__members {
     display: block;
     margin-top: 0.5rem;
+    color: var(--primary-color-text);
   }
 
   .link__picture .picture__image {

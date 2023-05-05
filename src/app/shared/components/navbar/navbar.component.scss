@@ -5,8 +5,7 @@
   backdrop-filter: blur(10px);
   transition: all 0.2s linear 0s;
   max-width: 100%;
-  padding: 20px;
-  margin: 16px;
+  margin-bottom: 20px;
   border-radius: 16px;
 }
 
@@ -29,22 +28,22 @@
 
   .navbar__currPage {
     font-size: 0.9rem;
+    color: var(--primary-color-text);
   }
 
   .navbar__link {
+    --border-radius: 10px;
     background: var(--bg-dark-gradient);
-
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--primary-color-text);
     padding: 0.3rem;
-    border-radius: 10px;
-
+    border-radius: var(--border-radius);
     display: flex;
     justify-content: center;
     align-items: center;
 
     .navbar__picture .navbar__img {
-      color: var(--color-text);
+      color: var(--primary-color-text);
       filter: var(--invert-white-color);
     }
 
@@ -53,7 +52,7 @@
     }
 
     &:hover {
-      color: var(--color-icon);
+      color: var(--primary-color);
     }
   }
 }

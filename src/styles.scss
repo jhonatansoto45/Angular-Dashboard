@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-  font-family: "Plus Jakarta Sans";
+  font-family: "Plus Jakarta Sans Normal";
   src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf)
     format("truetype");
 }
 
 @font-face {
-  font-family: "Plus Jakarta Sans";
+
+  font-family: "Plus Jakarta Sans Italic";
   src: url(assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf)
     format("truetype");
 }
@@ -17,30 +18,21 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Plus Jakarta Sans Normal", sans-serif;
 }
 
 :root {
-  --color-text: #ffffff;
-  --color-text-black: #000000;
-  --color-text-white-hover: #dddddd;
-  --font-bold: 600;
-  --font-size-sm: 0.875rem;
-  --bg: #1a202c;
-  --border-menu: #e2e8f0;
-  --background-menu-item: #1a1f37;
-  --color-icon: #582cff;
-  --title-size: 2.5rem;
-  --border-radius: 12px;
-  --green-color-bar: #05c997;
+  /* COLORS */
+  --primary-color: #582cff;
+  --secondary-color: #05c997;
+  --primary-color-text: #ffffff;
+  --secondary-color-text: #000000;
+  --color-hover-text: #dddddd;
   --gray: #919eb1;
+  /* BACKGROUND */
+  --bg: #1a202c;
+  --background-menu-item: #1a1f37;
   --bg-glass-gray: rgba(221, 221, 221, 0.041);
-  --background-contain-light: linear-gradient(
-      127.09deg,
-      rgba(23, 10, 54, 0.788) 19.41%,
-      rgba(14, 20, 48, 0.356) 76.65%
-    )
-    border-box;
   --background-contain: linear-gradient(
       127.09deg,
       rgba(6, 11, 40, 0.94) 19.41%,
@@ -52,17 +44,23 @@
     rgba(6, 11, 38, 0.94) 59.3%,
     rgba(26, 31, 55, 0) 100%
   );
+  /* FONTS */
+  --font-bold: 600;
+  --font-size-sm: 0.875rem;
+  --font-size-title: 2.5rem;
+  /* BORDERS */
+  --border-menu: #e2e8f0;
+  --border-radius: 12px;
+  --border-radius-sm: 4px;
+  /* SHADOW */
   --box-shadow: rgba(145, 158, 171, 0.2) 0px 2px 1px -1px,
     rgba(145, 158, 171, 0.14) 0px 1px 1px 0px,
     rgba(145, 158, 171, 0.12) 0px 1px 3px 0px;
-  // for the svg icons
+  /* INVERTS (for the svg icons) */
   --invert-purple-color: invert(18%) sepia(95%) saturate(4717%)
     hue-rotate(252deg) brightness(98%) contrast(106%); // #582cff
   --invert-white-color: invert(95%) sepia(5%) saturate(0%) hue-rotate(23deg)
     brightness(106%) contrast(107%); // #ffffff
-
-  //transitions
-  --hover-items-transition: 0.4s ease-in-out;
 }
 
 body {
@@ -70,4 +68,13 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+}
+
+.divisor {
+  border-radius: var(--border-radius);
+  background: var(--background-contain);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s linear 0s;
+  padding: 15px;
+  overflow: hidden;
 }

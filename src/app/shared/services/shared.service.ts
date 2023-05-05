@@ -29,7 +29,7 @@ export class SharedService {
   private _menuUser: MenuItem[] = [
     {
       name: 'Perfil',
-      route: 'auth/login',
+      route: 'auth/profile',
       icon: '../../../assets/images/icons/user.svg',
     },
     {

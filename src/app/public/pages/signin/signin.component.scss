@@ -77,7 +77,7 @@
       border: 1px solid;
       overflow: hidden;
       position: relative;
-      background: var(--color-icon);
+      background: var(--primary-color);
       color: var(--text-color);
       border: none;
       padding: 0.5rem;
@@ -131,8 +131,8 @@
         }
 
         &:hover {
-          border: 1px solid var(--color-icon);
-          background-color: var(--color-icon);
+          border: 1px solid var(--primary-color);
+          background-color: var(--primary-color);
         }
 
         &:hover .others__logo {
@@ -157,11 +157,11 @@
         animation: background-pan 4s linear infinite;
         background: linear-gradient(
           90deg,
-          var(--color-icon),
+          var(--primary-color),
           var(--color-text),
-          var(--color-icon),
+          var(--primary-color),
           var(--color-text),
-          var(--color-icon)
+          var(--primary-color)
         );
         background-size: 200%;
         background-clip: border-box;

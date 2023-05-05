@@ -13,10 +13,20 @@
   overflow: hidden;
 }
 
+.authors__title {
+  color: var(--primary-color-text);
+}
+
 .tr {
   display: flex;
   align-items: center;
   gap: 15px;
+  color: var(--primary-color-text);
+}
+
+th,
+td {
+  color: var(--primary-color-text);
 }
 
 .table__img {
@@ -25,7 +35,6 @@
   border-radius: 50%;
   object-fit: cover;
 }
-
 
 .projects {
   width: 100%;

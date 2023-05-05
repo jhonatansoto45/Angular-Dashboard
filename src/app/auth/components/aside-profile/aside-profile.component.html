@@ -1,0 +1,12 @@
+<aside class="aside divisor">
+  <ul class="aside__list">
+    <li
+      *ngFor="let item of menuList"
+      class="aside__item"
+      [routerLink]="item.route"
+      routerLinkActive="aside__active"
+    >
+      {{ item.name }}
+    </li>
+  </ul>
+</aside>

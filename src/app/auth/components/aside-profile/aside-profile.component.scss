@@ -1,0 +1,20 @@
+.aside {
+  width: 260px;
+  height: 100%;
+}
+
+.aside__list {
+  list-style: none;
+}
+
+.aside__item {
+  padding: 10px 8px;
+  color: var(--primary-color-text);
+  cursor: pointer;
+}
+
+.aside__active {
+  border-radius: 12px;
+  background-color: var(--background-menu-item);
+}
+
