@@ -41,6 +41,7 @@
       *ngFor="let link of menuUser"
       [routerLink]="link.route"
       routerLinkActive="menu__active"
+      (click)="visibleMenu = false"
     >
       <div class="menu__img__icon">
         <img [src]="link.icon" [alt]="link.name" class="menu__icon" />

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { TableModule } from 'primeng/table';
+
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './pages/login/login.component';
 import { HelpComponent } from './pages/help/help.component';
@@ -25,7 +27,8 @@ import { TeamsMembersComponent } from './pages/profile/pages/teams-members/teams
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    TableModule
   ]
 })
 export class AuthModule { }
