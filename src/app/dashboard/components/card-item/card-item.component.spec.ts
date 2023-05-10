@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardItemComponent } from './card-item.component';
-import { ImagePipe } from '../../pipe/image.pipe';
+import { ImagePipe } from '../../../shared/pipe/image.pipe';
 
 describe('CardItemComponent', () => {
   let component: CardItemComponent;
