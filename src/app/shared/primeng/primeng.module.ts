@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 
 import { ChartModule } from 'primeng/chart';
-import { DragScrollModule } from 'ngx-drag-scroll';
-import { TableModule } from 'primeng/table';
-import { RatingModule } from 'primeng/rating';
-import { TagModule } from 'primeng/tag';
 import { DialogModule } from 'primeng/dialog';
+import { DragScrollModule } from 'ngx-drag-scroll';
+import { PanelModule } from 'primeng/panel';
+import { RatingModule } from 'primeng/rating';
+import { TableModule } from 'primeng/table';
+import { TagModule } from 'primeng/tag';
 
 @NgModule({
   exports: [
     ChartModule,
-    DragScrollModule,
-    TableModule,
-    RatingModule,
-    TagModule,
     DialogModule,
+    DragScrollModule,
+    PanelModule,
+    RatingModule,
+    TableModule,
+    TagModule,
   ],
 })
 export class PrimengModule {}

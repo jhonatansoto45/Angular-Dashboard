@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TableModule } from 'primeng/table';
-
 import { AuthRoutingModule } from './auth-routing.module';
+import { PrimengModule } from '../shared/primeng/primeng.module';
+
 import { LoginComponent } from './pages/login/login.component';
 import { HelpComponent } from './pages/help/help.component';
 import { LogoutComponent } from './pages/logout/logout.component';
@@ -12,7 +12,6 @@ import { AsideProfileComponent } from './components/aside-profile/aside-profile.
 import { MyProfileComponent } from './pages/profile/pages/my-profile/my-profile.component';
 import { TeamsComponent } from './pages/profile/pages/teams/teams.component';
 import { TeamsMembersComponent } from './pages/profile/pages/teams-members/teams-members.component';
-
 
 @NgModule({
   declarations: [
@@ -23,12 +22,8 @@ import { TeamsMembersComponent } from './pages/profile/pages/teams-members/teams
     AsideProfileComponent,
     MyProfileComponent,
     TeamsComponent,
-    TeamsMembersComponent
+    TeamsMembersComponent,
   ],
-  imports: [
-    CommonModule,
-    AuthRoutingModule,
-    TableModule
-  ]
+  imports: [CommonModule, AuthRoutingModule, PrimengModule],
 })
-export class AuthModule { }
+export class AuthModule {}

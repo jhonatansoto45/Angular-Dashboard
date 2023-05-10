@@ -8,3 +8,9 @@ export interface TeamMembersList {
   dateAdded: string;
   lastActive: string;
 }
+
+export interface TeamsList {
+  title: string;
+  description: string;
+  skills?: string[];
+}

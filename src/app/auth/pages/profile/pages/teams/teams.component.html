@@ -1,3 +1,14 @@
 <section class="teams">
-
+  <div class="teams__panel" *ngFor="let item of listTeams">
+    <p-panel class="panel" [header]="item.title" [toggleable]="true">
+      <p class="panel__description">
+        {{ item.description }}
+      </p>
+      <ol class="panel__list">
+        <li class="panel__item" *ngFor="let skill of item.skills">
+          {{ skill }}
+        </li>
+      </ol>
+    </p-panel>
+  </div>
 </section>

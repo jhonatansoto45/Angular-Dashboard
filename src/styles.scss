@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
 @font-face {
   font-family: "Plus Jakarta Sans Normal";
   src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf)
@@ -11,7 +14,6 @@
     format("truetype");
 }
 
-@import "primeng/resources/primeng.css";
 
 * {
   padding: 0;
@@ -79,5 +81,4 @@ body {
   backdrop-filter: blur(10px);
   transition: all 0.2s linear 0s;
   padding: 15px;
-  overflow: hidden;
 }

@@ -79,3 +79,12 @@
     height: 100%;
   }
 }
+
+::ng-deep .members__table {
+  .p-datatable .p-datatable-thead > tr > th,
+  .p-datatable .p-datatable-tbody > tr > td {
+    background: var(--bg);
+    color: var(--primary-color-text);
+    border: none;
+  }
+}
